@@ -1,0 +1,177 @@
+/* Global Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa; /* Light theme background */
+  color: #212529;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Theme */
+.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Ensure Navbar doesn't overlap content */
+body {
+  padding-top: 70px; /* Adjust for fixed navbar */
+}
+
+/* Navbar Styling */
+.navbar {
+  padding: 10px 15px;
+  background-color: #343a40; /* Dark navbar background */
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.nav-link {
+  font-size: 1rem;
+  padding: 10px 15px;
+ color:#007bff;
+  
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #17a2b8 !important; /* Light blue hover effect */
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Table Styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+/* Make table headers stand out */
+.table th {
+  padding: 12px;
+  text-align: center;
+  background-color: #007bff; /* Blue background for headers */
+  color: white;
+  white-space: nowrap;
+}
+
+/* Table cell styling */
+.table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #ddd;
+}
+
+/* Hover effect for table rows */
+.table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Make table responsive */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+}
+
+/* Links Styling */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  /* Adjust navbar links */
+  .navbar-nav {
+    text-align: center;
+  }
+
+  /* Search bar on mobile */
+  .d-flex input {
+    width: 70%;
+  }
+
+  /* Hide table headers on mobile */
+  .table thead {
+    display: none;
+  }
+
+  /* Table rows display as blocks on mobile */
+  .table tbody tr {
+    display: block;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f9f9f9;
+  }
+
+  .table tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  /* Add labels for mobile */
+  .table tbody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #555;
+  }
+}
+
+/* Additional Styling for Table on Large Screens */
+@media (min-width: 768px) {
+  .table th, .table td {
+    padding: 15px;
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 576px) {
+  body {
+    padding-top: 60px;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 15px;
+  }
+
+  .navbar-collapse {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px 0;
+  }
+
+  /* Adjust input group on small screens */
+  .form-control {
+    width: 100%;
+  }
+}
+

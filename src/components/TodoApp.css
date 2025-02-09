@@ -1,0 +1,90 @@
+/* Todo List Card Styling */
+
+body{
+  justify-content: center;
+}
+
+.todo-card {
+  width: 100%;
+  max-width: 500px;  /* Set max width for the card */
+  margin: 50px auto;  /* Center the card horizontally and give it some vertical margin */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Soft shadow around the card */
+}
+
+/* Title Styling */
+.todo-card .card-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input group - Add Task */
+.todo-card .input-group {
+  margin-bottom: 20px;
+}
+
+.todo-card .input-group input {
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;  /* Make the input take full width */
+}
+
+.todo-card .input-group button {
+  border-radius: 5px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.todo-card .input-group button:hover {
+  background-color: #0056b3;  /* Darker blue on hover */
+}
+
+/* List Items */
+.todo-card .list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+.todo-card .list-group-item button {
+  margin-left: 10px;
+  padding: 5px 10px;
+}
+
+.todo-card .list-group-item button:hover {
+  opacity: 0.8;  /* Slight opacity change on hover */
+}
+
+/* Empty State Message */
+.todo-card .list-group-item.text-center {
+  color: #888;
+}
+
+/* Responsiveness for Small Screens */
+@media (max-width: 576px) {
+  .todo-card {
+    max-width: 100%;  /* Card takes full width on small screens */
+    margin: 20px auto;
+  }
+
+  .todo-card .input-group {
+    flex-direction: column;
+  }
+
+  .todo-card .input-group input,
+  .todo-card .input-group button {
+    width: 100%;  /* Make input and button stack vertically */
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,148 @@
+/* NewsApi.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* NewsApi.css */
+.news-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+}
+
+.news-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.news-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.news-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #ddd;
+}
+
+.news-details {
+  padding: 15px;
+}
+
+.news-headline {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.news-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+  height: 80px;
+  overflow: hidden;
+}
+
+.news-link {
+  display: inline-block;
+  color: #e1e8f0;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.news-link:hover {
+  text-decoration: underline;
+}
+/* Add this to NewsApi.css */
+.country-selector {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.country-selector select {
+  padding: 8px;
+  margin-left: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+  .news-title {
+    font-size: 1.5rem;
+  }
+
+  .news-list {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+    gap: 15px;
+  }
+
+  .news-card {
+    padding: 10px;
+  }
+
+  .news-headline {
+    font-size: 1.1rem;
+  }
+
+  .news-description {
+    font-size: 0.9rem;
+    height: auto; /* Allow description to expand */
+  }
+
+  .news-link {
+    font-size: 0.9rem;
+  }
+}
+
+/* Very Small Devices */
+@media (max-width: 480px) {
+  .news-title {
+    font-size: 1.25rem;
+  }
+
+  .news-card {
+    padding: 8px;
+  }
+
+  .news-headline {
+    font-size: 1rem;
+  }
+
+  .news-description {
+    font-size: 0.85rem;
+  }
+
+  .news-link {
+    font-size: 0.85rem;
+  }
+}
